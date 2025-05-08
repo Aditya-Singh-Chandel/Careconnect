@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------ CUSTOM SCROLL BAR ----------------- */
+/* Apply custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+  height: 7px; /* Scrollbar height */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #70707050; /* Thumb color */
+  border-radius: 0px; /* Thumb border-radius */
+}
+
+/* Scrollbar thumb states */
+::-webkit-scrollbar-thumb:hover {
+  background: #55555570; /* Hover thumb color */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #44444470; /* Active thumb color */
+}
+/* ------------------------------------------------------ */
+
+.gradient {
+  width: 440px;
+  height: 440px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 21rem;
+  background: linear-gradient(180deg, #f22fb0 0%, rgba(239, 81, 109, 0) 100%),
+    radial-gradient(
+      94.51% 124.88% at 94.32% 94.43%,
+      /* 0% 180% at 924.32% 94.43%, */ #f22fb0 0%,
+      #f58a2570 32.29%,
+      #7061a3 104.06%,
+      rgba(43, 90, 211, 0) 100%
+    ),
+    linear-gradient(313.04deg, #f58a25 0.93%, #7061a310 125.68%);
+  background-blend-mode: normal, normal, normal, normal, normal, normal;
+  filter: blur(60px);
+}
+
+.screengradient {
+  width: 100vw;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle 800px at 700px 200px,
+      var(--purple-2),
+      transparent
+    ),
+    radial-gradient(
+      circle 600px at calc(100% - 300px) 300px,
+      var(--blue-3),
+      transparent
+    ),
+    radial-gradient(circle 800px at right center, var(--sky-3), transparent),
+    radial-gradient(circle 800px at right bottom, var(--sky-1), transparent),
+    radial-gradient(
+      circle 800px at calc(50% - 600px) calc(100% - 100px),
+      var(--pink-3),
+      var(--pink-1),
+      transparent
+    );
+}
+
+.dotted {
+  --dot-bg: #ffffff;
+  --dot-color: #000000;
+  --dot-size: 1px;
+  --dot-space: 22px;
+  z-index: 0;
+  background:
+    linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(https://img.icons8.com/?size=48&id=WpQIVxfhhzqt&format.png)
+    no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+.mdxeditor-toolbar {
+  border-radius: 0%;
+}
+
+._placeholder_uazmk_1084 {
+  color: #969696;
+}
+
+.inputStyle,
+.inputStyleWrong,
+.inputStyleVerfied {
+  width: 2rem !important;
+  height: 2rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.inputStyle {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.inputStyleWrong {
+  border: 3px solid #d33c3c;
+}
+
+.inputStyleVerfied {
+  border: 3px solid #10b981;
+}
